@@ -1,9 +1,10 @@
 # netlify.toml
 
 [build]
-  base = "moiveapp/letsthango-master"  # Specify the correct base directory
-  command = "npm run build"
-  publish = "public"  # Adjust if your built files are in a different directory
+base = "moiveapp/letsthango-master"
+command = "npm run build"
+publish = "public"
+
 
 [functions]
   directory = "netlify/functions"  # Specify the correct functions directory if applicable
