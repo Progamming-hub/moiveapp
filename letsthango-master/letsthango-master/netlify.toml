@@ -1,6 +1,19 @@
-[build]
-  command = "npm run build"
-  publish = "dist"  # Replace with your build output directory
+# netlify.toml
 
-[site]
-  command = "npm start"  # Replace with your start command
+[build]
+  base = "moiveapp/letsthango-master"  # Specify the correct base directory
+  command = "npm run build"
+  publish = "public"  # Adjust if your built files are in a different directory
+
+[functions]
+  directory = "netlify/functions"  # Specify the correct functions directory if applicable
+
+# Add environment variables if needed
+[[plugins]]
+  package = "netlify-plugin-firebase-functions"
+
+[[plugins]]
+  package = "netlify-plugin-chromium"
+
+# Deploy message
+deploy-moiveapp = true
